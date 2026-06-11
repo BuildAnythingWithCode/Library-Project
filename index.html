@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex row">
+      <button type="button" id="add-book-btn">Add A New Book</button>
+      <button id="show-book-info-btn">Show/Hide Book Info</button>
+    </div>
+
+    <div id="book-info-section" class="hidden"></div>
+    <form action="#" method="post" class="hidden">
+      <label for="title">Book Title</label>
+      <input type="text" id="title" name="title" />
+      <label for="author">Book Author</label>
+      <input type="text" id="author" name="author" />
+      <label for="pages">Number of Pages</label>
+      <input type="number" id="pages" name="pages" />
+      <h3>Have You Read It?</h3>
+      <label for="hasRead">Yes</label>
+      <input type="radio" id="hasRead" name="hasRead" />
+      <label for="hasRead">No</label>
+      <input type="radio" id="hasRead" name="hasRead" />
+      <button type="submit" id="submitIt">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
