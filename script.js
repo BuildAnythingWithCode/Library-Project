@@ -67,14 +67,14 @@ function addBookToLibrary(title, author, pages, hasRead) {
   removeEntryBtn.textContent = 'Remove This Entry';
   newDiv.appendChild(removeEntryBtn);
   removeEntryBtn.addEventListener('click', () => {
+    console.log('You attempted to remove the entry of ID # ', newBook.uniqueID);
     const index = myLibrary.indexOf(newBook);
     if (index > -1) {
       myLibrary.splice(index, 1);
       newDiv.remove();
       readSpan.remove();
     }
-    console.log(`You attempted to remove the entry of ID # ${this.uniqueID}. `);
-    console.log(`New book collection: ${myLibrary}.`);
+    console.log('New book collection: ', myLibrary);
   });
   console.log('new submission!');
   console.log(myLibrary);
