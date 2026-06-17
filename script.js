@@ -48,7 +48,6 @@ function addBookToLibrary(title, author, pages, hasRead) {
   author = document.querySelector('#author').value;
   pages = document.querySelector('#pages').value;
   hasRead = document.querySelector('#hasRead').checked;
-  // const uniqueID = crypto.randomUUID();
   const newBook = new Book(title, author, pages, hasRead);
   myLibrary.push(newBook);
   const newDiv = document.createElement('p');
