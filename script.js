@@ -15,6 +15,7 @@ function Book(title, author, pages, hasRead) {
   this.author = author;
   this.pages = pages;
   this.hasRead = hasRead;
+  this.uniqueID = crypto.randomUUID();
   this.info = function () {
     const haveTheyRead = this.hasRead ? 'already read' : 'has not read';
     return `${this.title} by ${this.author}, ${this.pages} pages, ${haveTheyRead}`;
@@ -29,9 +30,10 @@ Book.prototype.changeReadStatus = function () {
     this.hasRead = true;
   }
   console.log(
-    `You attempted to change the read status of ID # ${this.uniqueID}.`,
+    'You attempted to change the read status of ID # ',
+    this.uniqueID,
   );
-  console.log(`New read status: ${this.hasRead}.`);
+  console.log('New read status: ', this.hasRead);
   console.log('New book collection: ', myLibrary);
 };
 
@@ -46,7 +48,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
   author = document.querySelector('#author').value;
   pages = document.querySelector('#pages').value;
   hasRead = document.querySelector('#hasRead').checked;
-  const uniqueID = crypto.randomUUID();
+  // const uniqueID = crypto.randomUUID();
   const newBook = new Book(title, author, pages, hasRead);
   myLibrary.push(newBook);
   const newDiv = document.createElement('p');
