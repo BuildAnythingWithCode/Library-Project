@@ -28,29 +28,3 @@ form {
 button {
   margin: 1rem;
 }
-
-/* :root {
-  --one: rgb(37, 40, 49);
-  --two: rgb(142, 150, 179);
-}
-
-:root.light {
-  --one: rgb(142, 150, 179);
-  --two: rgb(37, 40, 49);
-} 
-
- body {
-  background-color: var(--one); 
-  height: 100vh;
-  width: 100vw;
-} 
-
- h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: var(--one);
-}*/
