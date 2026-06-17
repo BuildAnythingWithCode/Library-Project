@@ -10,16 +10,31 @@ const form = document.querySelector('form');
 const myLibrary = [];
 
 // Constructor Function
-function Book(title, author, pages, hasRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.hasRead = hasRead;
-  this.uniqueID = crypto.randomUUID();
-  this.info = function () {
-    const haveTheyRead = this.hasRead ? 'already read' : 'has not read';
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${haveTheyRead}`;
-  };
+// function Book(title, author, pages, hasRead) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.hasRead = hasRead;
+//   this.uniqueID = crypto.randomUUID();
+//   this.info = function () {
+//     const haveTheyRead = this.hasRead ? 'already read' : 'has not read';
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${haveTheyRead}`;
+//   };
+// }
+
+// Constructor Function Refactored To Class
+class Book {
+  constructor(title, author, pages, hasRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.hasRead = hasRead;
+    this.uniqueID = crypto.randomUUID();
+    this.info = function () {
+      const haveTheyRead = this.hasRead ? 'already read' : 'has not read';
+      return `${this.title} by ${this.author}, ${this.pages} pages, ${haveTheyRead}`;
+    };
+  }
 }
 
 // Prototype Function
